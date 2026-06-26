@@ -31,13 +31,13 @@ app.grid_columnconfigure(0, weight=1)  # Configura la columna 0 de la ventana pa
 
 
 #------------------------------------
-# --- FRAME BOTONES
+#--------- FRAME BOTONES
 #------------------------------------
 main_frame = ctk.CTkFrame(app, width=280, height=120)
 main_frame.grid(row=0, column=0, padx=20, pady=10, sticky='ew')
 main_frame.grid_propagate(False)
 
-# --- Botonera
+# --- Botones
 btn01 = ctk.CTkButton(main_frame, text='Cargar jugador', width=200, height=10, command=lambda:fn.cargar_jugador(carga_frame))
 btn01.grid(row=0, column=0, padx=40, pady=8)
 
@@ -49,7 +49,7 @@ btn03.grid(row=2, column=0, padx=40, pady=8)
 
 
 #------------------------------------
-# --- FRAME CARGA DE DATOS
+#--------- FRAME CARGA DE DATOS
 #------------------------------------
 carga_frame = ctk.CTkFrame(app, width=280, height=200)
 carga_frame.grid(row=1, column=0, padx=20, pady=10, sticky='nsew')

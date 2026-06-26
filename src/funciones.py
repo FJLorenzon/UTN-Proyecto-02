@@ -11,7 +11,7 @@ import db
 
 
 #------------------------------------
-#--------- FUNCIONES DE FRAME
+#--------- FUNCIONES DE FRAME GLOBAL
 #------------------------------------
 def limpiar_frame(frame):
     for widget in frame.winfo_children():
@@ -19,7 +19,7 @@ def limpiar_frame(frame):
         
 
 #------------------------------------
-#--------- FUNCIONES DE JUGADOR
+#--------- FUNCIONES DE FRAME JUGADOR
 #------------------------------------
 def cargar_jugador(carga_frame):
     # Vaciamos el frame carga_frame
@@ -58,7 +58,7 @@ def guardar_jugador(entry_jugador, lista_pierna):
     
     
 #------------------------------------
-#--------- FUNCIONES DE PENAL 
+#--------- FUNCIONES DE FRAME PENAL 
 #------------------------------------
 def cargar_penal(carga_frame):
     # Vaciamos el frame carga_frame
@@ -139,8 +139,8 @@ def ver_grafico(carga_frame):
     btn_carga = ctk.CTkButton(carga_frame, text='GRAFICAR', width=60, height=20, command=lambda: generar_grafico(combobox_jugador, jugador_valor))
     btn_carga.grid(row=2, column=0, padx=50, pady=10)
     
+    
 def generar_grafico(combobox_jugador, jugador_valor):
-
     nombre = combobox_jugador.get()
 
     if nombre == "":
@@ -217,7 +217,7 @@ def generar_grafico(combobox_jugador, jugador_valor):
 
         x, y = zonas[posicion]
 
-        # Variaci�n para evitar superposici�n
+        # Variacion para evitar superposicion
         x += random.uniform(-0.08, 0.08)
         y += random.uniform(-0.08, 0.08)
 

@@ -49,6 +49,9 @@ def insertar_penal(id_jugador, equipo, penal):
     )
     conexion.commit()
     
+    
+### DEFINIMOS LOS SELECTS
+#--------------------------------------------------
 def select_jugadores():
     cursor.execute("SELECT * FROM jugadores ORDER BY nombre")
     return cursor.fetchall()
